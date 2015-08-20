@@ -2,7 +2,7 @@ Package.describe({
   name: 'tauruscolvin:meteor-react-bootstrap',
   version: '0.0.1',
   summary: 'Meteor package which exports browserified React, ReactMeteor, ReactBootstrap and classNames.',
-  git: '',
+  git: 'git@github.com:colvint/meteor-react-bootstrap.git',
   documentation: 'README.md'
 });
 
