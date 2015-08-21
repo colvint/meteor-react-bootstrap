@@ -11,8 +11,6 @@ function handler(compileStep) {
       harmony: true
     })
   });
-
-  console.log('compiled ', outputFile);
 }
 
 Plugin.registerSourceHandler("jsx", handler);
