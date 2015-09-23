@@ -1,6 +1,6 @@
 Package.describe({
   name: 'tauruscolvin:meteor-react-bootstrap',
-  version: '0.0.2',
+  version: '0.1.1',
   summary: 'Meteor package which exports browserified React, ReactMeteor, ReactBootstrap and classNames.',
   git: 'git@github.com:colvint/meteor-react-bootstrap.git',
   documentation: 'README.md'
@@ -24,7 +24,8 @@ Package.registerBuildPlugin({
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.1.0.3');
+  api.versionsFrom('1.2.0.1');
+  api.use('ecmascript');
 
   api.use(['cosmos:browserify@0.5.0'], 'client');
   api.use('templating', 'client');
