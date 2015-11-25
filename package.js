@@ -27,16 +27,22 @@ Package.onUse(function(api) {
   api.versionsFrom('1.2.0.1');
   api.use('ecmascript');
 
-  api.use(['cosmos:browserify@0.5.0'], 'client');
-  api.use('templating', 'client');
+  api.use([
+    'cosmos:browserify@0.5.0',
+    'templating'
+  ], 'client');
 
   api.addFiles([
     'client.browserify.js',
-    'react-meteor.js'
+    'react-meteor.js',
+    'client/lib/date-input.jsx',
   ], 'client');
 
-  api.export('React', 'client');
-  api.export('ReactMeteor', 'client');
-  api.export('ReactBootstrap', 'client');
-  api.export('classNames', 'client');
+  api.export([
+    'React',
+    'ReactMeteor',
+    'ReactBootstrap',
+    'classNames',
+    'DateInput'
+  ], 'client');
 });
