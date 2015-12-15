@@ -92,7 +92,7 @@ function renderInPlaceOfNode(reactElement, targetNode) {
     child = next;
   }
 
-  var result = React.render(reactElement, container);
+  var result = ReactDOM.render(reactElement, container);
   var rendered = container.firstChild;
 
   if (prevSibs.length > 0) {
@@ -111,7 +111,7 @@ function renderInPlaceOfNode(reactElement, targetNode) {
 }
 
 function unmountComponent(reactComponent) {
-  var rootNode = React.findDOMNode(reactComponent);
+  var rootNode = ReactDOM.findDOMNode(reactComponent);
   var container = rootNode && rootNode.parentNode;
 
   if (container) {
@@ -127,7 +127,7 @@ function unmountComponent(reactComponent) {
       sibling = next;
     }
 
-    React.unmountComponentAtNode(container);
+    ReactDOM.unmountComponentAtNode(container);
 
     siblings.forEach(function (sib) {
       container.appendChild(sib);

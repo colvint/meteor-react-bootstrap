@@ -1,15 +1,20 @@
 Package.describe({
   name: 'tauruscolvin:meteor-react-bootstrap',
-  version: '0.1.2',
+  version: '0.14.3',
   summary: 'Meteor package which exports browserified React, ReactMeteor, ReactBootstrap and classNames.',
   git: 'git@github.com:colvint/meteor-react-bootstrap.git',
   documentation: 'README.md'
 });
 
 Npm.depends({
-  'react':           '0.13.3',
-  'react-bootstrap': '0.24.5',
-  'classnames':      '2.1.3'
+  'react':                           '0.14.3',
+  'react-dom':                       '0.14.3',
+  'react-addons-linked-state-mixin': '0.14.3',
+  'react-addons-update':             '0.14.3',
+  'react-bootstrap':                 '0.28.1',
+  'classnames':                      '2.2.1',
+  'react-select':                    '1.0.0-beta6',
+  'fixed-data-table':                '0.6.0'
 });
 
 Package.registerBuildPlugin({
@@ -35,14 +40,23 @@ Package.onUse(function(api) {
   api.addFiles([
     'client.browserify.js',
     'react-meteor.js',
-    'client/lib/date-input.jsx',
+    'client/lib/date-input.jsx'
   ], 'client');
+
+  api.addFiles([
+    'client/stylesheets/react-select.css',
+    'client/stylesheets/react-data-table.css'
+  ], 'client', {bare: true});
 
   api.export([
     'React',
+    'ReactLinkedStateMixin',
+    'ReactUpdate',
     'ReactMeteor',
     'ReactBootstrap',
     'classNames',
-    'DateInput'
+    'DateInput',
+    'ReactSelect',
+    'ReactDataTable'
   ], 'client');
 });
