@@ -14,7 +14,8 @@ Npm.depends({
   'react-bootstrap':                 '0.28.1',
   'classnames':                      '2.2.1',
   'react-select':                    '1.0.0-beta6',
-  'fixed-data-table':                '0.6.0'
+  'fixed-data-table':                '0.6.0',
+  'react-highcharts':                '6.0.0'
 });
 
 Package.registerBuildPlugin({
@@ -57,6 +58,7 @@ Package.onUse(function(api) {
     'classNames',
     'DateInput',
     'ReactSelect',
-    'ReactDataTable'
+    'ReactDataTable',
+    'ReactHighcharts'
   ], 'client');
 });
