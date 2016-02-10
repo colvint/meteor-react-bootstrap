@@ -7,3 +7,4 @@ classNames            = require('classnames');
 ReactSelect           = require('react-select');
 ReactDataTable        = require('fixed-data-table');
 ReactHighcharts       = require('react-highcharts/bundle/highcharts');
+ReactTinyMCE          = require('react-tinymce');
